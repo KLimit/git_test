@@ -1,7 +1,8 @@
-sr = 0.1;
-time = 0:sr:10;
+% This tests whether the impulse_response.m function works
 
-x = sin(2*pi.*time);
-y = cos(2*pi*time);
-
-impulse_response(x, y, sr);
+fs=10;
+t=-1:1/fs:1;
+x=cos(2*pi*t);    % input signal
+y=3*cos(2*pi*t);  % output signal
+[h,t]=impulse_response(x,y,fs);   % we expect the impulse response to be
+amplitude=(1/fs)*trapz(h)         % a dirac delta with amplitude 3
