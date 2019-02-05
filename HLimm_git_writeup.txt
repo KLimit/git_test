@@ -1,0 +1,36 @@
+Henry Limm
+
+Git Version Control (Clinic Tutorial)
+
+
+
+- user (GitHub): KLimit
+- tutorial repository: KLimit/git_test
+
+- total time: ~4 hr
+
+No errors to report; however, I did take the time to set up my CLI so that I
+was able to open files using Sublime Text 3 rather than VS Code (on Windows).
+Below is how I accomplished this:
+
+	- under C:\Users\<username>, create a .bash_profile file
+		-- this is best done from a text editor -> Save as vs. in File Explorer
+
+	- paste the following into the .bash_profile:
+		-- alias subl="/c/Program\ Files/Sublime\ Text\ 3/subl.exe -w"
+			--- note the forward slashes are to escape the space; apostrophe (')
+					within the string should also work (see below)
+			--- also note the -w to make Git Bash wait for the file to close
+					before resuming the CLI
+
+	- that should be all that's necessary
+
+	- confirm that .gitconfig contains the following code (this should happen
+		during installation if you choose to use Sublime 3)
+		-- [core]
+				editor = "'c:/program files/sublime text 3/subl.exe' -w "
+
+I'm not sure how popular Sublime is among students now, but I'm sure that
+someone might find it helpful to add this in an appendix or as a side note. It
+seems that other text editors like Atom are a bit more simply integrated just as
+VS Code is.
